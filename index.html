@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click & Pick - Secure</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Disable right-click
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+      alert("Right-click disabled for security.");
+    });
+
+    // Disable inspect and view-source shortcuts
+    document.addEventListener("keydown", function (e) {
+      if (
+        e.ctrlKey && (e.key === "u" || e.key === "U" || e.key === "s" || e.key === "S") ||
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J"))
+      ) {
+        e.preventDefault();
+        alert("Developer tools are blocked.");
+      }
+    });
+  </script>
+</head>
+<body>
+  <nav>
+    <h1>Click & Pick</h1>
+  </nav>
+
+  <header class="hero">
+    <h2>Secure Shopping Experience</h2>
+    <p>Everything you see here is protected for your safety.</p>
+    <a href="https://wa.me/917889510214" class="btn">Order on WhatsApp</a>
+  </header>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Product">
+      <h3>Urban Jacket</h3>
+      <p>₹1299</p>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Product">
+      <h3>Basic Tee</h3>
+      <p>₹499</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Click & Pick. Protected by Jarvis Shield 🛡️</p>
+  </footer>
+</body>
+</html>
+
